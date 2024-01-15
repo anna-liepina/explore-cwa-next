@@ -1,6 +1,5 @@
 const url = process.env.NEXT_PUBLIC_BASE_URL;
 
-console.log({ env: process.env });
 module.exports = {
   contentful: {
     space_id: process.env.CONTENTFUL_SPACE_ID || '',
