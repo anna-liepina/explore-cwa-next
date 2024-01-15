@@ -260,10 +260,12 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
   return (
     <>
       <Container {...containerProps} maxWidth={false} className={classes.footerContainer}>
-        <footer className={classes.footer}>
-          {footerContent?.menuItemsCollection?.items?.length && (
+      {
+        !!footerContent?.menuItemsCollection?.items?.length && (
+          <footer className={classes.footer}>
             <nav role="navigation" className={classes.menuWrapper}>
-              {footerContent.menuItemsCollection.items.map(
+            {
+              footerContent.menuItemsCollection.items.map(
                 menuItem =>
                   menuItem && (
                     <div key={menuItem.sys.id} className={classes.menuColumn}>
@@ -290,10 +292,12 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
                       </ul>
                     </div>
                   ),
-              )}
+              )
+            }
             </nav>
-          )}
-        </footer>
+          </footer>
+        )
+      }
       </Container>
       <Container maxWidth={false} className={classes.footerCorporateContainer}>
         <section className={classes.footerCorporate}>
